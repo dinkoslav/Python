@@ -1,0 +1,10 @@
+N = input("Enter sides: ")
+from random import randrange
+firstRoll = randrange(1,int(N))
+secondRoll = randrange(1,int(N))
+print ("First roll:")
+print (firstRoll)
+print ("Second roll:")
+print (secondRoll)
+print ("Sum is:")
+print (firstRoll + secondRoll)
