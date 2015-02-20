@@ -1,0 +1,8 @@
+a = [1]
+b = [1,2,3]
+c = []
+d = [True, True, True]
+e = ["Python", "Django"]
+f = ["Dinko", "Ivanov", "Todorov"]
+g = ["Dinko", "Anatoli", "Steff", "Slavka", "Kateto"]
+h = ["Python", "Django", "C#", "Java", "JavaScript", "SQL", "HTML", "CSS", "PHP"]
