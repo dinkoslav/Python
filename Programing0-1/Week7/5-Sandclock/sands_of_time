@@ -1,0 +1,26 @@
+def sands_of_time(num):
+    dots = int(num/2)
+    counter = 0
+    while(counter <= dots):
+        str = ""
+        for i in range(0, counter):
+            str += "."
+        for i in range(0, num - (2*counter)):
+            str += "*"
+        for i in range(0, counter):
+            str += "."
+        counter += 1
+        print(str)
+    counter -= 1
+    while(counter >= 0):
+        str = ""
+        for i in range(0, counter):
+            str += "."
+        for i in range(0, num - (2*counter)):
+            str += "*"
+        for i in range(0, counter):
+            str += "."        
+        print(str)
+        counter -= 1
+        
+sands_of_time(11)

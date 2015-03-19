@@ -1,0 +1,55 @@
+def str_reverse(str):
+    new_str = ""
+    for i in range(0, len(str)):
+        new_str += str[len(str) - 1 - i]
+    return new_str
+
+def join(delimeter, arr):
+    result = ""
+    for i in range(0, len(arr)):
+        if i == 0:
+            result += arr[i]
+        else:
+            result += delimeter + arr[i]
+    return result
+
+def startswith(search, string):
+    if search == string[:len(search)]:
+        return True
+    return False
+
+def endswith(search, string):
+    if search == string[len(string) - len(search):]:
+        return True
+    return False
+
+def trim(str):
+    new_str = str
+    while len(new_str) > 0 and new_str[0] == " ":
+        new_str = new_str[1:]
+    while len(new_str) > 0 and new_str[len(new_str) - 1] == " ":
+        new_str = new_str[:len(new_str) - 1]
+    return new_str
+    
+print(str_reverse("Python"))
+print(str_reverse("kapak"))
+print(str_reverse(""))
+
+print(join(" ", ["Radoslav", "Yordanov", "Georgiev"]))
+print(join("\n", ["line1", "line2"]))
+print(join("\n", ["line1", "line2"]))
+
+print(startswith("Py", "Python"))
+print(startswith("py", "Python"))
+print(startswith("baba", "asdbaba"))
+
+print(endswith(".py", "hello.py"))
+print(endswith("kapak", "babakapak"))
+print(endswith(" ", "Python   "))
+print(endswith("py", "python"))
+
+print(trim("   asda   "))
+print(trim(" spacious    "))
+print(trim("no here but yes at end   "))
+print(trim("                      "))
+print(trim("python"))

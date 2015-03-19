@@ -1,0 +1,21 @@
+def trim(str):
+    new_str = str
+    while len(new_str) > 0 and new_str[0] == " ":
+        new_str = new_str[1:]
+    while len(new_str) > 0 and new_str[len(new_str) - 1] == " ":
+        new_str = new_str[:len(new_str) - 1]
+    return new_str
+
+def inner_trim(string):
+    trimed_string = trim(string)
+    new_string = ""
+    for i in range(0, len(trimed_string)):
+        if trimed_string[i] != " ":
+            new_string += trimed_string[i]
+        else:
+            if trimed_string[i - 1] != " ":
+                new_string += trimed_string[i]
+    return new_string
+
+print(inner_trim("Python    Django"))
+print(inner_trim("  Python     Django   "))

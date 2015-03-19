@@ -1,0 +1,15 @@
+def string_matrix(matrix_width, strings):
+    new_string = ""
+    for row in range(0, len(strings)):
+        if row > 0:
+            new_string += "\n"
+        new_string += "|"
+        for col in range(0, matrix_width):
+            if col < len(strings[row]):
+                new_string += " " + strings[row][col] + " |"
+            else:
+                new_string += " X |"
+    return new_string
+
+result = string_matrix(6,["python","gogo","perl","java","haskell","ruby0nRails"])
+print(result)

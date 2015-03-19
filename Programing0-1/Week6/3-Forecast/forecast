@@ -1,0 +1,30 @@
+def forecast(days):
+    events = ["sunshine", "rain", "snow"]
+    sunshines = 0
+    rain = 0
+    snow = 0
+    for day in days:
+        if day == events[0]:
+            sunshines += 1
+        if day == events[1]:
+            rain += 1
+        if day == events[2]:
+            snow += 1
+    if sunshines == rain == snow:
+        return days[len(days)-1]
+    if sunshines > rain and  sunshines > snow:
+        return events[0]
+    if rain > sunshines and rain > snow:
+        return events[1]
+    if snow > sunshines and snow > rain:
+        return events[2]
+    if sunshines == rain:
+        return events[2]
+    if snow == rain:
+        return events[0]
+    if sunshines == snow:
+        return events[1]
+
+print(forecast(["snow", "snow", "rain", "sunshine"]))
+print(forecast(["rain", "rain", "snow", "snow", "sunshine", "sunshine"]))
+print(forecast(["rain", "rain", "sunshine", "sunshine"]))

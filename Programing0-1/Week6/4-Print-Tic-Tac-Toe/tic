@@ -1,0 +1,24 @@
+def board_to_string(board):
+    board_str = ""
+    new_board = []
+    for row in board:
+        new_board += ['| ' + join(' | ', row) + ' |']
+    board_str = join('\n', new_board)
+    return board_str
+
+def join(delimeter, arr):
+    result = ""
+    for i in range(0, len(arr)):
+        if i == 0:
+            result += arr[i]
+        else:
+            result += delimeter + arr[i]
+    return result
+
+board = [ ["X", "O", "#"],
+          ["X", "X", "X"],
+          ["#", "#", "#"] ]
+
+result = board_to_string(board)
+
+print(result)
